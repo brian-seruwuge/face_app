@@ -1,0 +1,6 @@
+issues faced in facebook project
+failed to load semantic-ui
+solution
+1. npm install --save semantic-ui-react
+2. npm install --save semantic-ui-css      (The second dependancy will allow you to apply styles)
+3. import 'semantic-ui-css/semantic.min.css';    (as well in the components you are working on)
