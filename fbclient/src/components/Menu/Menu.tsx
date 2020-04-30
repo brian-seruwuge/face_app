@@ -27,12 +27,17 @@ class MenuBar extends React.Component<MenuBarProps, MenuBarState> {
               <Input className='icon' icon='search' placeholder='Search...' />
             </Menu.Item>
             <Menu.Menu position='right'>
-            <Menu.Item>
+            <Menu.Item href = "https://www.facebook.com/">
             <Button primary>Home</Button>
           </Menu.Item>
-          <Menu.Item>
-            <Button primary>Create</Button>
-          </Menu.Item>
+            <Dropdown item text='create'>
+            <Dropdown.Menu>
+              <Dropdown.Item>Your Groups</Dropdown.Item>
+              <Dropdown.Item>Advertising on Facebook</Dropdown.Item>
+              <Dropdown.Item>Switch to New Facebook</Dropdown.Item>
+              <Dropdown.Item>Logout</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
           <Menu.Item>
               <Button className='icon' icon='comment alternate outline' />
             </Menu.Item>

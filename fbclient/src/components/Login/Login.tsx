@@ -6,26 +6,39 @@ import 'semantic-ui-css/semantic.min.css'
 
 export interface LoginProps { 
 }
+
+export interface LoginData {
+  email:string,
+  password:string
+}
  
 export interface LoginState {
-    email: string,
-    password: string
+ form: LoginData;
+ isLoading: boolean,
+ error: null,
+ hits:[]
 }
  
 class Login extends React.Component<LoginProps, LoginState> {
     constructor(props:any){
         super(props)
-    this.state = {email:"", password:""}
+    this.state = {
+      form:{email:"", password:""},
+      isLoading: false,
+      error: null,
+      hits:[]
+    }
 
 }
 
 handleEmail=(event:any) =>{
-    this.setState({email: event.target.email})
-
+  let value = event.target.value
+    this.setState((prevState)=> ({form:{...prevState.form, email: value}}))
 }
 
 handlePassword=(event:any)=>{
-  this.setState({password: event.target.password})
+  let value = event.target.value
+    this.setState((prevState)=> ({form:{...prevState.form, password: value}}))
 }
 
 handleSubmit=(event:any): void =>{
@@ -33,25 +46,38 @@ handleSubmit=(event:any): void =>{
     event.preventDefault()
     console.log(this.state)
 }
+
+componentDidMount(){
+  this.setState({isLoading: true})
+  fetch('https://api.mydomain.com')
+  .then(response => response.json())
+  .then(data => this.setState({hits: data.hits, isLoading:false}))
+  .catch(error => this.setState({error, isLoading:false}))
+}
     render() { 
       let title = "facebook"
+      const {isLoading} = this.state;
+      if(isLoading){
+        return <p>Loading...</p>
+      }
         return ( 
+  
           <Segment raised>
           <Header as="h1" textAlign="left">{title}</Header>
          <Form onSubmit={this.handleSubmit}>
         <Form.Group>
           <Form.Input
             placeholder='Email or phone'
-            type="text"
+            type="email"
             name='email'
-            value={this.state.email}
+            value={this.state.form.email}
             onChange={this.handleEmail}
           />
           <Form.Input
             placeholder='Password'
-            type="text"
+            type="password"
             name='password'
-            value={this.state.password}
+            value={this.state.form.password}
             onChange={this.handlePassword}
           />
            
