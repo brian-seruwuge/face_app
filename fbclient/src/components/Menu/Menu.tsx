@@ -32,26 +32,129 @@ class MenuBar extends React.Component<MenuBarProps, MenuBarState> {
           </Menu.Item>
             <Dropdown item text='create'>
             <Dropdown.Menu>
-              <Dropdown.Item>Your Groups</Dropdown.Item>
-              <Dropdown.Item>Advertising on Facebook</Dropdown.Item>
-              <Dropdown.Item>Switch to New Facebook</Dropdown.Item>
-              <Dropdown.Item>Logout</Dropdown.Item>
+              <Dropdown.Item href = "https://www.facebook.com/pages/create/?ref_type=universal_creation_hub">Page</Dropdown.Item>
+              <Dropdown.Item href = "https://www.facebook.com/adsmanager/creation?act=2636820839927803&filter_set">Ad</Dropdown.Item>
+              <Dropdown.Item href= "https://www.facebook.com/ajax/groups/create_get/?ref=www_header_dropdown">Group</Dropdown.Item>
+              <Dropdown.Item>Event</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
           <Menu.Item>
-              <Button className='icon' icon='comment alternate outline' />
+    <Dropdown pointing className='link item'  icon='comment alternate outline'>
+      <Dropdown.Menu>
+        <Dropdown.Header>Friend Requests</Dropdown.Header>
+        <Dropdown.Item>
+          <Dropdown text='Clothing'>
+            <Dropdown.Menu>
+              <Dropdown.Header>Mens</Dropdown.Header>
+              <Dropdown.Item>Shirts</Dropdown.Item>
+              <Dropdown.Item>Pants</Dropdown.Item>
+              <Dropdown.Item>Jeans</Dropdown.Item>
+              <Dropdown.Item>Shoes</Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Header>Womens</Dropdown.Header>
+              <Dropdown.Item>Dresses</Dropdown.Item>
+              <Dropdown.Item>Shoes</Dropdown.Item>
+              <Dropdown.Item>Bags</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Dropdown.Item>
+        <Dropdown.Item>Home Goods</Dropdown.Item>
+        <Dropdown.Item>Bedroom</Dropdown.Item>
+        <Dropdown.Divider />
+        <Dropdown.Header>Order</Dropdown.Header>
+        <Dropdown.Item>Status</Dropdown.Item>
+        <Dropdown.Item>Cancellations</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
             </Menu.Item>
             <Menu.Item>
-              <Button className='icon' icon='whatsapp' />
+            <Dropdown pointing className='link item'  icon='whatsapp'>
+      <Dropdown.Menu>
+        <Dropdown.Header>New Messages</Dropdown.Header>
+        <Dropdown.Item>
+          <Dropdown text='Clothing'>
+            <Dropdown.Menu>
+              <Dropdown.Header>Mens</Dropdown.Header>
+              <Dropdown.Item>Shirts</Dropdown.Item>
+              <Dropdown.Item>Pants</Dropdown.Item>
+              <Dropdown.Item>Jeans</Dropdown.Item>
+              <Dropdown.Item>Shoes</Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Header>Womens</Dropdown.Header>
+              <Dropdown.Item>Dresses</Dropdown.Item>
+              <Dropdown.Item>Shoes</Dropdown.Item>
+              <Dropdown.Item>Bags</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Dropdown.Item>
+        <Dropdown.Item>Home Goods</Dropdown.Item>
+        <Dropdown.Item>Bedroom</Dropdown.Item>
+        <Dropdown.Divider />
+        <Dropdown.Header>Order</Dropdown.Header>
+        <Dropdown.Item>Status</Dropdown.Item>
+        <Dropdown.Item>Cancellations</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
             </Menu.Item>
           <Menu.Item>
-              <Button className='icon' icon='bell' />
+          <Dropdown pointing className='link item'  icon='bell'>
+      <Dropdown.Menu>
+        <Dropdown.Header>Notifications</Dropdown.Header>
+        <Dropdown.Item>
+          <Dropdown text='Clothing'>
+            <Dropdown.Menu>
+              <Dropdown.Header>Mens</Dropdown.Header>
+              <Dropdown.Item>Shirts</Dropdown.Item>
+              <Dropdown.Item>Pants</Dropdown.Item>
+              <Dropdown.Item>Jeans</Dropdown.Item>
+              <Dropdown.Item>Shoes</Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Header>Womens</Dropdown.Header>
+              <Dropdown.Item>Dresses</Dropdown.Item>
+              <Dropdown.Item>Shoes</Dropdown.Item>
+              <Dropdown.Item>Bags</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Dropdown.Item>
+        <Dropdown.Item>Home Goods</Dropdown.Item>
+        <Dropdown.Item>Bedroom</Dropdown.Item>
+        <Dropdown.Divider />
+        <Dropdown.Header>Order</Dropdown.Header>
+        <Dropdown.Item>Status</Dropdown.Item>
+        <Dropdown.Item>Cancellations</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
             </Menu.Item>
             
             <Menu.Item>
-              <Button className='icon' icon='question circle' />
+            <Dropdown pointing className='link item'  icon='comment alternate outline'>
+      <Dropdown.Menu>
+        <Dropdown.Header>Quick Help</Dropdown.Header>
+        <Dropdown.Item>
+          <Dropdown text='Clothing'>
+            <Dropdown.Menu>
+              <Dropdown.Header>Mens</Dropdown.Header>
+              <Dropdown.Item>Shirts</Dropdown.Item>
+              <Dropdown.Item>Pants</Dropdown.Item>
+              <Dropdown.Item>Jeans</Dropdown.Item>
+              <Dropdown.Item>Shoes</Dropdown.Item>
+              <Dropdown.Divider />
+              <Dropdown.Header>Womens</Dropdown.Header>
+              <Dropdown.Item>Dresses</Dropdown.Item>
+              <Dropdown.Item>Shoes</Dropdown.Item>
+              <Dropdown.Item>Bags</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+        </Dropdown.Item>
+        <Dropdown.Item>Home Goods</Dropdown.Item>
+        <Dropdown.Item>Bedroom</Dropdown.Item>
+        <Dropdown.Divider />
+        <Dropdown.Header>Order</Dropdown.Header>
+        <Dropdown.Item>Status</Dropdown.Item>
+        <Dropdown.Item>Cancellations</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
             </Menu.Item>
-
           <Dropdown item icon='dropdown'>
             <Dropdown.Menu>
               <Dropdown.Item>Your Groups</Dropdown.Item>
