@@ -4,3 +4,27 @@ solution
 1. npm install --save semantic-ui-react
 2. npm install --save semantic-ui-css      (The second dependancy will allow you to apply styles)
 3. import 'semantic-ui-css/semantic.min.css';    (as well in the components you are working on)
+
+
+postgres and node js
+cannot read property query is not defined            - error occured as pool had not been exported in server.js ie add module.exports = { pool }
+
+pool is not defined 
+occured as server.js or pool had not been imported into index.js                      -const { pool } = require('./db/server')
+
+cannot find module index.js// resolveFilename-   occured because i had changed file names from original
+
+module not found --- occured because app.route('/users') and app.get(getUsers) had not been added
+
+connection of react to postgres
+could not load resource(in console)   ---i had to add full api ie 'http://localhost:5000/users' other than just ('/users').
+
+could not go past cross origin
+i hadnt installed cors ie npm i cors
+had not used    app.use(cors());
+
+failed to add load resource
+'routes' had been added before app.use methods
+
+
+

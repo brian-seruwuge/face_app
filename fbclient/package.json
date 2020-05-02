@@ -1,53 +1,56 @@
 {
-  "name": "fbclient",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "@types/jest": "^24.9.1",
-    "@types/node": "^12.12.37",
-    "@types/react": "^16.9.34",
-    "@types/react-dom": "^16.9.6",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1",
-    "react-semantic-ui-datepickers": "^2.6.0-beta.0",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.88.2",
-    "typescript": "^3.7.5"
-  },
-  "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
-    "storybook": "start-storybook -p 9001 -c .storybook"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@storybook/addon-actions": "^5.3.18",
-    "@storybook/addon-knobs": "^5.3.18",
-    "@storybook/addon-notes": "^5.3.18",
-    "@storybook/addons": "^5.3.18",
-    "@storybook/react": "^5.3.18",
-    "awesome-typescript-loader": "^5.2.1",
-    "react-docgen-typescript-loader": "^3.7.2",
-    "react-docgen-typescript-webpack-plugin": "^1.1.0"
-  }
+    "name": "fbclient",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@testing-library/jest-dom": "^4.2.4",
+        "@testing-library/react": "^9.5.0",
+        "@testing-library/user-event": "^7.2.1",
+        "@types/jest": "^24.9.1",
+        "@types/node": "^12.12.37",
+        "@types/react": "^16.9.34",
+        "@types/react-dom": "^16.9.6",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-scripts": "3.4.1",
+        "react-semantic-ui-datepickers": "^2.6.0-beta.0",
+        "semantic-ui-css": "^2.4.1",
+        "semantic-ui-react": "^0.88.2",
+        "typescript": "^3.7.5"
+    },
+    "scripts": {
+        "start": "react-scripts-ts start",
+        "build": "react-scripts-ts build",
+        "test": "react-scripts-ts test --env=jsdom",
+        "eject": "react-scripts-ts eject",
+        "storybook": "start-storybook -p 9001 -c .storybook"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "proxy": "http://localhost:5000",
+
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@storybook/addon-actions": "^5.3.18",
+        "@storybook/addon-knobs": "^5.3.18",
+        "@storybook/addon-notes": "^5.3.18",
+        "@storybook/addons": "^5.3.18",
+        "@storybook/react": "^5.3.18",
+        "awesome-typescript-loader": "^5.2.1",
+        "react-docgen-typescript-loader": "^3.7.2",
+        "react-docgen-typescript-webpack-plugin": "^1.1.0"
+    }
+
 }
