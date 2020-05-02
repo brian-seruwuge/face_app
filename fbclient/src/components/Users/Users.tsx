@@ -1,12 +1,44 @@
 import * as React from 'react';
 import { Component } from 'react';
 import {Table} from 'semantic-ui-react'
+import 'semantic-ui-css/semantic.min.css'
 
-const Users=(props:any)=>{
+export interface UsersProps {
+    
+}
+
+export interface UsersState{
+   users:[],
+   error:null,
+   isLoading:boolean
+}
+class Users extends React.Component<UsersProps, UsersState> {
+  constructor(props:any){
+    super(props)
+    this.state={users:[],
+      error:null,
+      isLoading:false
+    }
+  }
+
+  componentDidMount=()=>{
+    this.setState({isLoading:true})
+    fetch('http://localhost:5000/users')
+    .then(res=>res.json())
+    .then(users=> this.setState({users, isLoading:false}))
+    .catch(error=>this.setState({error, isLoading:false}))
+  }
+
+  render(){
+    const {isLoading} = this.state
+    if(isLoading){
+      return <p>from facebook</p>
+    }
     return(
     <Table striped>
     <Table.Header>
       <Table.Row>
+      <Table.HeaderCell>ID</Table.HeaderCell>
         <Table.HeaderCell>First Name</Table.HeaderCell>
         <Table.HeaderCell>Last Name</Table.HeaderCell>
         <Table.HeaderCell>Department</Table.HeaderCell>
@@ -14,19 +46,21 @@ const Users=(props:any)=>{
 
       </Table.Row>
     </Table.Header>
-    {props.staffs.map((staff: any) => (
-          <Table.Body key={staff.id}>
+    {this.state.users.map((user: any) => (
+          <Table.Body key={user.id}>
             <Table.Row>
-              <Table.Cell>{staff.firstName}</Table.Cell>
-              <Table.Cell>{staff.lastName}</Table.Cell>
-              <Table.Cell>{staff.department}</Table.Cell>
-              <Table.Cell>{staff.MZO}</Table.Cell>
+            <Table.Cell>{user.id}</Table.Cell>
+            <Table.Cell>{user.firstname}</Table.Cell>
+              <Table.Cell>{user.lastname}</Table.Cell>
+              <Table.Cell>{user.department}</Table.Cell>
+              <Table.Cell>{user.mzo}</Table.Cell>
       </Table.Row>
-       </Table.Body>))}
+       </Table.Body>))}  
   </Table>
     
 
     )   
+}
 }
 
 export default Users
