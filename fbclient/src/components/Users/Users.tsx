@@ -23,7 +23,7 @@ class Users extends React.Component<UsersProps, UsersState> {
 
   componentDidMount=()=>{
     this.setState({isLoading:true})
-    fetch('http://localhost:5000/users')
+    fetch('http://localhost:3001/face_users')
     .then(res=>res.json())
     .then(users=> this.setState({users, isLoading:false}))
     .catch(error=>this.setState({error, isLoading:false}))
@@ -41,8 +41,10 @@ class Users extends React.Component<UsersProps, UsersState> {
       <Table.HeaderCell>ID</Table.HeaderCell>
         <Table.HeaderCell>First Name</Table.HeaderCell>
         <Table.HeaderCell>Last Name</Table.HeaderCell>
-        <Table.HeaderCell>Department</Table.HeaderCell>
-        <Table.HeaderCell>Mzo</Table.HeaderCell>
+        <Table.HeaderCell>password</Table.HeaderCell>
+        <Table.HeaderCell>birthday</Table.HeaderCell>
+        <Table.HeaderCell>email</Table.HeaderCell>
+        <Table.HeaderCell>gender</Table.HeaderCell>
 
       </Table.Row>
     </Table.Header>
@@ -51,9 +53,11 @@ class Users extends React.Component<UsersProps, UsersState> {
             <Table.Row>
             <Table.Cell>{user.id}</Table.Cell>
             <Table.Cell>{user.firstname}</Table.Cell>
-              <Table.Cell>{user.lastname}</Table.Cell>
-              <Table.Cell>{user.department}</Table.Cell>
-              <Table.Cell>{user.mzo}</Table.Cell>
+            <Table.Cell>{user.lastname}</Table.Cell>
+              <Table.Cell>{user.password}</Table.Cell>
+              <Table.Cell>{user.birthday}</Table.Cell>
+              <Table.Cell>{user.email}</Table.Cell>
+              <Table.Cell>{user.gender}</Table.Cell>
       </Table.Row>
        </Table.Body>))}  
   </Table>
